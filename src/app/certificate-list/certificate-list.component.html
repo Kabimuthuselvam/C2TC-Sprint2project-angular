@@ -1,0 +1,16 @@
+<div>
+  <h3>Certificates</h3>
+  <div *ngIf="items.length === 0">No certificates yet.</div>
+  <ul>
+    <li *ngFor="let c of items">
+      <strong>{{c.studentName}} ({{c.rollNo}})</strong> —
+      {{c.certificateName}} — {{c.course}} — {{c.dateIssued}}
+      <span *ngIf="c.collected"> ✅ collected</span>
+      <button *ngIf="!c.collected" (click)="svc.markCollected(c.id)">Mark collected</button>
+      <button (click)="svc.remove(c.id)">Remove</button>
+    </li>
+  </ul>
+  <div style="margin-top:12px;">
+    <button (click)="svc.clearAll()">Clear all</button>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="card p-3" style="max-width:600px">
+  <h3>Add Certificate</h3>
+  <div>
+    <label>Student name</label><br/>
+    <input placeholder="Student name" [(ngModel)]="studentName" />
+  </div>
+  <div>
+    <label>Roll No</label><br/>
+    <input placeholder="Roll No" [(ngModel)]="rollNo" />
+  </div>
+  <div>
+    <label>Course</label><br/>
+    <input placeholder="Course" [(ngModel)]="course" />
+  </div>
+  <div>
+    <label>Certificate name</label><br/>
+    <input placeholder="Certificate name" [(ngModel)]="certificateName" />
+  </div>
+  <div>
+    <label>Date issued</label><br/>
+    <input type="date" [(ngModel)]="dateIssued" />
+  </div>
+  <div style="margin-top:8px;">
+    <button (click)="add()">Add</button>
+  </div>
+</div>
